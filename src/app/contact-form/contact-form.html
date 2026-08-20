@@ -1,0 +1,38 @@
+<main>
+  <h1>Contact Information</h1>
+
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <label class="field">
+      <span>First name</span>
+      <input type="text" formControlName="firstName" autocomplete="given-name" />
+      @if (form.controls.firstName.invalid && form.controls.firstName.touched) {
+        <span class="error">First name is required.</span>
+      }
+    </label>
+
+    <label class="field">
+      <span>Last name</span>
+      <input type="text" formControlName="lastName" autocomplete="family-name" />
+      @if (form.controls.lastName.invalid && form.controls.lastName.touched) {
+        <span class="error">Last name is required.</span>
+      }
+    </label>
+
+    <label class="field">
+      <span>Email</span>
+      <input type="email" formControlName="email" autocomplete="email" />
+      @if (form.controls.email.invalid && form.controls.email.touched) {
+        <span class="error">A valid email is required.</span>
+      }
+    </label>
+
+    <div class="actions">
+      <button type="submit" class="btn">Save to file</button>
+      <a class="btn secondary" routerLink="/">Back to primes</a>
+    </div>
+
+    @if (saved) {
+      <p class="success">Saved! Check your browser's downloads.</p>
+    }
+  </form>
+</main>
