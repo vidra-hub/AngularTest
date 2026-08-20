@@ -1,0 +1,40 @@
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  color: #1a1a1a;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.prime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 0.5rem;
+}
+
+.prime-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.5rem 0.25rem;
+  background: #f7f9fc;
+}
+
+.prime-cell .index {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.prime-cell .value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2a4d8f;
+}
